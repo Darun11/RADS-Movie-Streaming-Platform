@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .video_div{
+      width:100%;
+      height:700px;
+      display:flex;
+      align-items: center;
+      justify-content:center;
+    }
+    body{
+      background:linear-gradient(90deg,#A9F1DF , #FFBBBB);
+      animation:body 1s linear infinite;
+    }
+    @keyframes body{
+    0%{background:linear-gradient(20deg,#A9F1DF , #FFBBBB)};
+    12%{background:linear-gradient(45deg,#A9F1DF , #FFBBBB);};
+    24%{background:linear-gradient(95deg,#A9F1DF , #FFBBBB);};
+    36%{background:linear-gradient(145deg,#A9F1DF , #FFBBBB);};
+    38%{background:linear-gradient(195deg,#A9F1DF , #FFBBBB);};
+    60%{background:linear-gradient(245deg,#A9F1DF , #FFBBBB);};
+    72%{background:linear-gradient(295deg,#A9F1DF , #FFBBBB);};
+    100%{background:linear-gradient(330deg,#A9F1DF , #FFBBBB);};
+
+}
+    video{
+      width:90%;
+      height:90%;
+    }
+  </style>
+  <body>
+    <div class="video_div">
+      <video width="100%" height="100%" controls muted>
+        <source src="" type="video/mp4">
+        Browser is not working
+      </video>
+    </div>
+    
+  </body>
+</html>

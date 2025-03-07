@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RADS</title>
+        <link rel="stylesheet" href="HomePageStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class= "navbar">
+            <div class="navbar-container">
+                <div class="logo-container">
+                    <img src="logo.png" class="logo" style="width: 120px; border-radius: 5px;">
+                </div>
+                <div class="menu-container">
+                    <ul class="menu">
+                        <a href="#movies"><li class="menu-items">Movies</li></a>
+                        <a href="#cartoons"><li class="menu-items">Cartoons</li></a>
+                        <a href="#other-shows"><li class="menu-items">Other Shows</li></a>
+                        <a href="top10Movies.html"><li class="menu-items">Top Rated Movies</li></a>
+                    </ul>
+                </div>
+                <div class="search-bar-container">
+                    <input type="text" class="searchBar" placeholder="Search" id="searchBar">
+                    <a href="" id= "linkMovie">
+                        <svg class="search_svg" id="search_svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-search" viewBox="0 0 16 16" onclick= "searchMovie()">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="profileDiv">
+                    <img src="pfp.jpg" class="profile" onmouseover="nameDisplay()" onmouseout="nameRemove()">
+                    <div class="profileName" id="profileName"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id = "home">
+            <div class="content-container">
+                <div class="featured-content">
+                    <img src="avengers_infinity_war_BG.jpg" class="slide" onclick="window.location='AvengersInfinityWar.html'">
+                    <img src="avengers_endgame_BG.jpg" class="slide" width="100%" height="95vh" onclick="window.location='Endgame.html'">
+                    <img src="avengers_age_of_ultron_BG.jpg" class="slide" onclick="window.location='AvengersAgeofUltron.html'">
+                    <img src="doctor_strange_BG.jpg" class="slide" onclick="window.location='DoctorStrange.html'">
+                    <button class="prev" onclick="goPrev()">&#10094</button>
+                    <button class="next" onclick="goNext()">&#10095</button>
+                </div>
+
+                <div class="movie-list-container"   id = "movies">
+                    <h1 class="movie-list-title">Marvel</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href = "Endgame.html">
+                                        <img src="avengers_endgame_BG.jpg" class="movie-list-item-img-marvel">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Avengers: Endgame</h3>
+                                    <p class="movie-list-item-desc">The fourth installment in the Avengers saga is the climax of an epic journey. Earth's heroes will finally understand how fragile our reality is—and the sacrifices that must be made to uphold it—in a story of friendship, teamwork and setting aside differences to overcome an impossible obstacle.</p>
+                                </div>
+                                
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="AvengersAgeofUltron.html">
+                                        <img src="avengers_age_of_ultron_BG.jpg" class="movie-list-item-img-marvel">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Avengers: Age of Ultron</h3>
+                                    <p class="movie-list-item-desc">Good intentions wreak havoc when Tony Stark (Robert Downey Jr.) unwittingly creates Ultron, an A.I. monster who vows to achieve "world peace" via mass extinction. Now the Avengers must reassemble to defeat him and save mankind…if they can!</p>
+                                </div>
+                                
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="BlackPanther.html">
+                                        <img src="black_panther_BG.jpg" class="movie-list-item-img-marvel">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Black Panther: Wakanda Forever</h3>
+                                    <p class="movie-list-item-desc">The people of Wakanda fight to protect their home from intervening world powers as they mourn the death of King T'Challa.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="AvengersInfinityWar.html">
+                                        <img src="avengers_infinity_war_BG.jpg" class="movie-list-item-img-marvel">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Avengers: Infinity War</h3>
+                                    <p class="movie-list-item-desc">The Avengers and their allies must risk their lives to stop Thanos, an intergalactic tyrant in search of the Gems of Infinity.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="DoctorStrange.html">
+                                        <img src="doctor_strange_BG.jpg" class="movie-list-item-img-marvel">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Doctor Strange in the Multiverse of Madness</h3>
+                                    <p class="movie-list-item-desc">
+                                    Doctor Strange teams up with a mysterious teenage girl who can travel across multiverses, to battle other-universe versions of himself which threaten to wipe out the multiverse. They seek help from the Scarlet Witch, Wong and others.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">Mission Impossible</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="MissionImpossible1.html">
+                                        <img src="mi_1_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Mission: Impossible</h3>
+                                    <p class="movie-list-item-desc">
+                                        Ethan Hunt, a secret agent, is framed for the deaths of his espionage team and attempts to flee government assassins after him. He races against the clock in order to discover the truth.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="MissionImpossible2.html">
+                                        <img src="mi_2_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Mission: Impossible II</h3>
+                                    <p class="movie-list-item-desc">
+                                        The world’s greatest spy, Ethan Hunt, returns and partners up with the beautiful Nyah Hall to stop renegade agent Sean Ambrose from releasing a new kind of terror on an unsuspecting world.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="MissionImpossible3.html">
+                                        <img src="mi_3_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Mission: Impossible III</h3>
+                                    <p class="movie-list-item-desc">
+                                        Ethan Hunt hurdles into spectacular new adventures from Rome to Shanghai as he races to rescue a captured agent and stop Davian from eliminating his next target: Ethan's wife.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="MissionImpossibleFallout.html">
+                                        <img src="mi_fallout_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Mission: Impossible - Fallout</h3>
+                                    <p class="movie-list-item-desc">
+                                        Ethan Hunt chooses to save his team over completing a mission, allowing stolen plutonium to fall into the wrong hands. Now, he must partner with a hard-hitting CIA agent in a race against time to stop a nuclear threat.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="MissionImpossibleDeadReckoning.html">
+                                        <img src="mi_dead_reckoning_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info"   id = "other-shows">
+                                    <h3 class="movie-list-item-title">Mission: Impossible - Dead Reckoning</h3>
+                                    <p class="movie-list-item-desc">
+                                        Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the hands of a mysterious, all-powerful enemy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">Other Shows</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="SherlockHolmes.html">
+                                        <img src="sherlock_holmes.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Sherlock Holmes: A Game of Shadows</h3>
+                                    <p class="movie-list-item-desc">
+                                        Detective Sherlock Holmes is on the trail of criminal mastermind Professor Moriarty, who is carrying out a string of random crimes across Europe.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="JaiBhim.html">
+                                        <img src="jai_bhim_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Jai Bhim</h3>
+                                    <p class="movie-list-item-desc">
+                                        A pregnant woman from a primitive tribal community, searches desperately for her husband, who is missing from police custody. So as to find her husband and seek justice for them, as their voice, a High Court advocate rises in support. Will their battle for justice succeed?</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="Leo.html">
+                                        <img src="leo_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Leo (Tamil)</h3>
+                                    <p class="movie-list-item-desc">
+                                        Violently pursued by criminals who insist he's a former gangster, a humble cafe owner fights to shield his family — and the truth about his identity.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="TopGunMaverick.html">
+                                        <img src="top_gun_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Top Gun: Maverick</h3>
+                                    <p class="movie-list-item-desc">
+                                        After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="MoneyHeist.html">
+                                        <img src="money_heist_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Money Heist</h3>
+                                    <p class="movie-list-item-desc">
+                                        A criminal mastermind who goes by "The Professor" has a plan to pull off the biggest heist in recorded history -- to print billions of euros in the Royal Mint of Spain. To help him carry out the ambitious plan, he recruits eight people with certain abilities and who have nothing to lose.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title" id = "cartoons">Cartoons</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="JackieChan'sAdventure.html">
+                                        <img src="jackie_chan_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Jackie Chan Adventures</h3>
+                                    <p class="movie-list-item-desc">
+                                        Jackie Chan teams up with his 11-year-old niece, Jade, traveling the globe to locate a dozen magical talismans before the sinister Dark Hand does. Helping Jackie and Jade is Uncle, a cantankerous but wise antiquities expert.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="StuartLittle.html">
+                                        <img src="stuart_little_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Stuart Little</h3>
+                                    <p class="movie-list-item-desc">
+                                        The Little family adopt a charming young mouse named Stuart, but the family cat wants rid of him.</p>
+                                </div>
+                            </div>
+                            <div class="movie-list-item">
+                                <div class="movie-list-item-img-container">
+                                    <a href="DragonBooster.html">
+                                        <img src="dragon_booster_BG.jpg" class="movie-list-item-img">
+                                        <h1 class="movie-list-item-watch-now">WATCH NOW</h1>
+                                    </a>
+                                </div>
+                                <div class="movie-list-item-info">
+                                    <h3 class="movie-list-item-title">Dragon Booster</h3>
+                                    <p class="movie-list-item-desc">
+                                        A teenager named Artha Penn teams up with a dragon named Beau and Artha was the chosen hero called the Dragon Booster.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src = "homepage2.js"></script>
+        <script src = "login.js"></script>
+    </body>
+</html>

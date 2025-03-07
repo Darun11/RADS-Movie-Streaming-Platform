@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main_content.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+       
+    </head>
+
+    <body>
+        <a class="back" href="mainhomepage.html">
+            <div>Back</div>
+        </a>
+        <div class="total_header">
+            <img src="logo.png" class="logo">
+            <div class="home_button">
+                <button>
+                    Home<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16" style="margin-left:10px;">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </button>
+                <div class="Home_bottom_box">
+                        <a href="#">All</a>
+                        <a href="#">Movies</a> 
+                </div>
+                
+            </div>
+            <div class="searchDiv">
+                <input type="text" placeholder="Search" class="search" id="textbox">
+                <a href="" id="linkMovie">
+                    <svg class="search_svg" id="search_svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16" onclick="searchMovie()">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg>
+                </a>
+                
+            </div>
+            <div onmouseover="nameDisplay()" onmouseout="nameRemove()" class="profileDiv">
+                <img src="profile_icon.jpg" class="profile">
+                <div class="profileName" id="profileName"></div>
+            </div>
+        </div>
+        
+        <div class="total_content">
+            <img src="Jai_bhim.webp" class="maincontent_photo">
+            <div class="blackcontent"></div>
+            <div class="writing_part">
+                <h3 class="Movie_name">Jai Bhim</h3>
+                <div class="Movie_description">
+                    After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
+                </div>
+                <div class="rating_row_div">
+                    <div class="rat_dur_year">IMDb 8.7</div>
+                    <div class="rat_dur_year">2h 45min</div>
+                    <div class="rat_dur_year">2021</div>
+                    <div class="box_in_rat">X-RAY</div>
+                    <div class="box_in_rat">U/A 13+</div>
+                </div>
+                <div class="rads_box">
+                    <div class="row1">
+                        <!-- <img src="Check mark.png" class="check_mark_img"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                            <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                          </svg>
+                        <div style="margin-left:10px;">
+                            Watch Movie For Free In RADS
+                        </div>
+                    </div>
+                    <div class="watch_like_div">
+                        <!-- <button class="watch_now" onclick="playVideo()" class="video_class">Watch Now</button>
+                        <button class="watch_now">Buy Now for Rs.99</button> -->
+
+                        <div class="btns">
+                            <a href="JaiBhim_Playvideo.html" id="play">
+                                <div>Watch Now&nbsp</div>  
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                                  </svg></a>
+
+                            <a href="" id="play">
+                                <div>Download&nbsp</div>  
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                              </svg></a>
+
+                              <a href="payment.html" id="download" target="_blank">Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                                <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
+                              </svg>99</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_section">
+            <div class="heading">Popular</div>
+            <div class="photo_section">
+
+                <div class="img1_box">
+                    <img src="Leo_BackG.jpg.jpg" class="img1" usemap="#Leo">
+                    <map name="Leo">
+                        <area shape="rect" coords="0,0,300,300" href="Leo.html" logo.png>
+                    </map>
+                    <div class="img_bottom_box">
+                        <div class="title">
+                            Leo(Tamil)
+                        </div>
+                        <div class="film_details">
+                            <div>2023</div>
+                            <div>2h 44min</div>
+                            <div class="u_a">U/A 13+</div>
+                        </div>
+                        <div class="about_film"> The film follows Parthi, a café owner and animal rescuer in Theog, who is pursued by gangsters Antony and Harold Das who suspect him to be Antony's estranged son, Leo.</div>
+                    </div>
+                </div>
+
+                <div class="img2_box">
+                    <img src="Age_of_Ultron.jpg" class="img2" usemap="#ageofultron">
+                    <map name="ageofultron">
+                        <area shape="rect" coords="0,0,300,300" href="AvengersAgeofUltron.html" logo.png>
+                    </map>
+                    <div class="img_bottom_box">
+                        <div class="title">
+                            Avengers:Age of Ultron
+                        </div>
+                    
+                        <div class="film_details">
+                            <div>2015</div>
+                            <div>2h 21min</div>
+                            <div class="u_a">U/A 13+</div>
+                        </div>
+                        <div class="about_film">As the fate of Earth hangs in the balance, the team is put to the ultimate test as they battle Ultron, a technological terror hell-bent on human extinction. Along the way, they encounter two mysterious and powerful newcomers, Pietro and Wanda Maximoff.</div>
+                    </div>
+                </div>
+
+                <div class="img3_box">
+                    <img src="Top_Gun_Maverick.jpg" class="img3" usemap="#topgun">
+                    <map name="topgun">
+                        <area shape="rect" coords="0,0,300,300" href="TopGunMaverick.html" logo.png>
+                    </map>
+                    <div class="img_bottom_box">
+                        <div class="title">
+                            Top Gun: Maverick
+                        </div>
+                    
+                        <div class="film_details">
+                            <div>2022</div>
+                            <div>2h 13min</div>
+                            <div class="u_a">U/A</div>
+                        </div>
+                        <div class="about_film">Maverick confronting his past while training a group of younger Top Gun graduates, including the son of his deceased best friend, for a dangerous mission.</div>
+                    </div>
+                </div>
+
+                <div class="img4_box">
+                    <img src="Sherlock_Holmes.jpg" class="img4" usemap="#sherlock">
+                    <map name="sherlock">
+                        <area shape="rect" coords="0,0,300,300" href="SherlockHolmes.html" logo.png>
+                    </map>
+                    <div class="img_bottom_box">
+                        <div class="title">
+                            Sherlock Holmes: A Game of Shadows
+                        </div>
+                    
+                        <div class="film_details">
+                            <div>2011</div>
+                            <div>2h 9min</div>
+                            <div class="u_a">U/A </div>
+                        </div>
+                        <div class="about_film">Detective Sherlock Holmes is on the trail of criminal mastermind Professor Moriarty, who is carrying out a string of random crimes across Europe.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        <script src="login.js"></script>
+        <script src="main_content.js"></script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="payment.css">
+  </head>
+  <body>
+    <a class="back"  href="mainhomepage.html">
+      <div style="display:inline-block;
+      background-color: rgb(0, 157, 255);
+      padding:8px 12px;
+      color:aliceblue;position:absolute;left:10px;top:10px" >Back</div>
+    </a>
+    <script src="main_content.js"></script>
+    <form action="Successful.html">
+      <div class="total">
+        <h3 class="title">Payment</h3>
+        <div class="inputbox">
+          <label>Card Accepted</label>
+          <img src="cards.png">
+        </div>
+        <div class="inputbox">
+          <label for="name">Name on Card</label>
+          <input type="text" id="name" placeholder="Enter card name: " minlength="3" required >
+        </div>
+        <div id="nameerror"></div>
+        <div class="inputbox">
+          <label for="cardnum">Credit Card Number</label>
+          <input type="text" id="cardnum" placeholder="1111-2222-3333-4444" pattern="[0-9]{16}" required >
+        </div>
+        <div id="numerror"></div>
+        <div class="inputbox">
+          <label for="exp">Exp Month:</label>
+          <select id="exp" required>
+            <option value="">Choose Month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </div>
+        <div id="montherror"></div>
+        <div class="row">
+          <div class="inputbox">
+            <label for="ExpYear">Exp Year</label>
+            <select id="ExpYear" required>
+              <option value="">Choose Year</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+            </select>
+            <div id="yearerror"></div>
+          </div>
+          
+          <div class="inputbox">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="1234" pattern="[0-9]{4}" required>
+            <div id="cvverror"></div>
+          </div>
+        </div>
+        
+        <input type="button" value="Submit" class="submit_button" onclick="return Validate()">
+       </div>
+    </form>
+  </body>
+</html>

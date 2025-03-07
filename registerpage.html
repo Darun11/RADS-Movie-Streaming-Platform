@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_register.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <link rel="text/javascript" href="homepage.js">
+
+    <title>RADS</title>
+    <script text="text/javascript" >
+        
+        
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var cpassword = document.getElementById("cpassword").value;
+
+            var usernameError = document.getElementById("usernameError");
+            var emailError = document.getElementById("emailError");
+            var passwordError = document.getElementById("passwordError");
+            var cpasswordError = document.getElementById("cpasswordError");
+
+            usernameError.innerHTML = "";
+            emailError.innerHTML = "";
+            passwordError.innerHTML = "";
+            cpasswordError.innerHTML = "";
+
+            if (username === "") {
+                usernameError.innerHTML = "*Username is required.";
+                return false;
+            }
+
+           
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            if (atpos < 1 || (dotpos - atpos) < 2) {
+                emailError.innerHTML = "*Please enter a valid email address.";
+                return false;
+            }
+
+            
+            if (password.length < 8) {
+                passwordError.innerHTML = "*Password must be at least 8 characters long.";
+                return false;
+            }
+
+            
+            if (password !== cpassword) {
+                cpasswordError.innerHTML = "*Passwords do not match.";
+                return false;
+            }
+            return true; 
+        }
+        $('#form').submit(function(e) {
+            e.preventDefault();
+
+        const formData = $(this).serialize();
+
+    if (validateForm(formData)) {
+    window.location.href = "mainhomepage.html";
+  } else {
+    alert('Error: Please fill out the form correctly');
+  }
+});
+    </script>
+</head>
+<body>
+    <a class="" href="homepage.html">
+        <div style="display:inline-block;
+        background-color: rgb(0, 157, 255);
+        padding:8px 12px; border-radius: 5px;
+        color:aliceblue">Back</div>
+      </a>
+    <div class="container">
+        <form action="mainhomepage.html" id="form" onsubmit="return validateForm()">
+            <h1>REGISTER</h1>
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Username">
+                <div class="error" id="usernameError"></div>
+                <i class="fa fa-user icon"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="email" name="email" placeholder="E-mail">
+                <div class="error" id="emailError"></div>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <i class="fa fa-user icon"></i>
+                <div class="error" id="passwordError"></div>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password">
+                <i class="fa fa-user icon"></i>
+                <div class="error" id="cpasswordError"></div>
+            </div>
+
+            <button type="submit">REGISTER</button>
+        </form>
+    </div>
+</body>
+</html>

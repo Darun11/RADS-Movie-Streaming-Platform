@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="payment.css">
+  </head>
+  <body>
+    <form action="Successful.html">
+      <div class="total">
+        <h3 class="title">Payment</h3>
+        <div class="inputbox">
+          <label>Card Accepted</label>
+          <img src="cards.png">
+        </div>
+        <div class="inputbox">
+          <label for="name">Name on Card</label>
+          <input type="text" id="name" placeholder="Enter card name: " required>
+        </div>
+        <div class="inputbox">
+          <label for="cardnum">Credit Card Number</label>
+          <input type="text" id="cardnum" placeholder="1111-2222-3333-4444" required>
+        </div>
+        <div class="inputbox">
+          <label for="exp">Exp Month:</label>
+          <select id="exp">
+            <option vlaue="">Choose Month</option>
+            <option value="">January</option>
+            <option value="">February</option>
+            <option value="">March</option>
+            <option value="">April</option>
+            <option value="">May</option>
+            <option value="">June</option>
+            <option value="">July</option>
+            <option value="">August</option>
+            <option value="">September</option>
+            <option value="">October</option>
+            <option value="">November</option>
+            <option value="">December</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <div class="inputbox">
+            <label for="ExpYear">Exp Year</label>
+            <select id="ExpYear">
+              <option value="">Choose Year</option>
+              <option value="">2023</option>
+              <option value="">2024</option>
+              <option value="">2025</option>
+              <option value="">2026</option>
+              <option value="">2027</option>
+            </select>
+          </div>
+          <div class="inputbox">
+            <label for="cvv">CVV</label>
+            <input type="number" id="cvv" placeholder="1234" required>
+          </div>
+        </div>
+        <input type="submit" value="Submit" class="submit_button">
+
+        
+
+      </div>
+    </form>
+  </body>
+</html>

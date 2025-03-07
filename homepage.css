@@ -1,0 +1,254 @@
+* {
+  margin: 0px;
+  font-family: "Roboto",sans-serif;
+}
+
+#background {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  width: 100%;
+  height: 58rem;
+  background-image: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7));
+  background-image: url(BG_Image.jpg);
+  border-image: fill O linear-gradient(#0003,#000);
+  background-size: cover; 
+  z-index: -1;
+}
+
+#logo {
+    width: 200px;
+    height: 75px;
+    border-radius: 15px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.navbar {
+  background-color: white;
+  width: fit-content;
+  height: fit-content;
+  display: flex ;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 22px;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+  opacity: 0.9;
+  position: relative;
+  top: 15px;
+}
+.navbar a {
+  color: rgb(0,0,97);
+  text-decoration: none;
+  font-size: larger;
+  padding: 8px 16px;
+  border-radius: 22px;
+}
+
+.navbar a:hover {
+  color: white;
+  transition: 0.25s;
+  background: rgb(3,3,110);
+}
+
+#SignIn {
+    background-color: rgb(0,0,97);
+    color: rgb(200,200,200);
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+    font-size: 30px;
+}
+
+
+#getStarted {
+    background: #000050;
+    cursor: pointer;
+    background: -o-linear-gradient(top, #000061, #000050);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    width: 160px;
+    height: 60px;
+}
+
+.footer {
+  background-image: url(footerBg.jpg);
+  background-size: repeat;
+  color: #ccc;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-align: center;
+  line-height: 15px;
+}
+
+.footer pre {
+  padding: 15px 0px 0px 15px;
+  font-size: 20px;
+
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.social-media-icons {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.social-media-icons li {
+  margin: 0 10px;
+}
+
+.social-media-icons img {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+}
+
+#rights {
+  text-align: center;
+  color: antiquewhite;
+  font-size: larger;
+  background-color: #000061;
+}
+
+#rights img {
+  width: 100px;
+  height: 50px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.movies-div {
+  background-image: url(movieBG.jpg);
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+.movie-list-container
+{
+    margin-left: 20px;
+    margin-top: 20px;
+    
+}
+
+.movie-list-title {
+  color: white;
+}
+
+.movie-list
+{
+    display: flex;
+    padding: 15px;
+}
+
+.movie-list-item
+{
+    margin-right: 30px;
+    width: 380px;   
+}
+
+.movie-list-item-img-container:hover .movie-list-item-img,
+.movie-list-item-img-container:hover .movie-list-item-img-marvel
+{
+    transform: scale(1.1);
+    transition: all 0.8s ease-in-out;
+    opacity: 0.4;
+}
+
+
+.movie-list-item-img-container
+{
+    position: relative;
+    cursor: pointer;
+    width: 260px;
+    height: 190px;
+}
+
+.movie-list-item-img-container:hover + .movie-list-item-info .movie-list-item-desc,
+.movie-list-item-img-container:hover + .movie-list-item-info .movie-list-item-title,
+.movie-list-item-img-container:hover .movie-list-item-watch-now
+{
+    opacity: 1 !important;
+}
+
+.movie-list-item-img
+{
+    width: 260px;
+    height: 190px;
+    object-fit: fill;
+    border-radius: 20px;
+}
+
+.movie-list-item-img-marvel
+{
+    width: 260px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.movie-list-item-watch-now
+{
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    opacity: 0;
+    transition: 1s all ease;
+    color: #cde;
+}
+
+.movie-list-item-info
+{
+    width: 260px;
+}
+
+.movie-list-item-title
+{
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+    color: aqua;
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.movie-list-item-desc
+{
+    bottom: 10px;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    transition: 1s all ease;
+}
+

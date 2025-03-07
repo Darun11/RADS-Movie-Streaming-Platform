@@ -1,0 +1,137 @@
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+#header {
+  background-image: url(BG_Image_TOU.jpg);
+  background-size: cover;
+  padding-left: 0px;
+  padding-bottom: 30px;
+}
+
+#headLogo {
+  width: 200px; 
+  height: 75px; 
+  border-radius: 15px; 
+  margin-right: 75%;
+  position: relative;
+  top: 10px;
+  left: 15px;
+}
+
+body {
+  background-image: url(top10MoviesBG.jpg);
+  background-size: cover;
+}
+nav{
+    float: none; 
+    clear: both;
+    width: 30%; 
+    margin-left: 500px;
+    margin-top: 80px;
+    background: #eee;
+    color: whitesmoke;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  nav li{
+    float: none; 
+    width: 100%;
+    height: auto;
+  }
+  
+  nav li a{
+    display: block; 
+    width: 100%; 
+    padding: 20px; 
+    border-left: 5px solid; 
+    position: relative; 
+    z-index: 2;
+    text-decoration: none;
+    color: #444444;
+    font-size: 18px;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+  }
+    
+  nav li a:hover{ border-bottom: 0px; color: #fff;}
+  nav li:nth-child(1) a{ border-left: 10px solid rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(2) a{ border-left: 10px solid rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(3) a{ border-left: 10px solid rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(4) a{ border-left: 10px solid rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(5) a{ border-left: 10px solid  rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(6) a{ border-left: 10px solid  rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(7) a{ border-left: 10px solid  rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(8) a{ border-left: 10px solid  rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(9) a{ border-left: 10px solid  rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+  nav li:nth-child(10) a{ border-left: 10px solid  rgb(0,0,97); background-color: lightblue; border-bottom: 1px solid darkslateblue; }
+    
+  nav li a:after { 
+    content: "";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0px;  
+    position: absolute; 
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s; 
+    z-index: -1;
+  }
+  
+  nav li a:hover:after{ width: 100%; }
+  nav li:first-child a:after{ background: darkslateblue; color: white; }
+  nav li:nth-child(2) a:after{ background: darkslateblue; color: white; }
+  nav li:nth-child(3) a:after{ background: darkslateblue; color: white; }
+  nav li:nth-child(4) a:after{ background: darkslateblue; color: white; }
+  nav li:nth-child(5) a:after{ background: darkslateblue; color: white; }
+  nav li:nth-child(6) a:after{ background: darkslateblue; color: white; }
+  nav li:nth-child(7) a:after{ background:  darkslateblue; color: white; }
+  nav li:nth-child(8) a:after{ background: darkslateblue; color: white; }
+  nav li:nth-child(9) a:after{ background: darkslateblue; color: white; }
+  nav li:nth-child(10) a:after{ background: darkslateblue; color: white; }
+
+.btn {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background: #075487;
+    background-image: -webkit-linear-gradient(top, #075487, #0883cf);
+    background-image: -moz-linear-gradient(top, #075487, #0883cf);
+    background-image: -ms-linear-gradient(top, #075487, #0883cf);
+    background-image: -o-linear-gradient(top, #075487, #0883cf);
+    background-image: linear-gradient(to bottom, #075487, #0883cf);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #084b75;
+    background-image: -webkit-linear-gradient(top, #084b75, #026cb3);
+    background-image: -moz-linear-gradient(top, #084b75, #026cb3);
+    background-image: -ms-linear-gradient(top, #084b75, #026cb3);
+    background-image: -o-linear-gradient(top, #084b75, #026cb3);
+    background-image: linear-gradient(to bottom, #084b75, #026cb3);
+    text-decoration: none;
+  }
+
+li div img {
+  width: 100px;  height: 130px; margin: 0 10px; visibility: hidden; opacity: 0; display: none;
+}
+
+li:hover div img {
+  width: 150px;  height: 180px; margin: 0 10px; visibility: visible; opacity: 1; transition: width 500ms ease, visibility 500ms ease; display: block;
+}

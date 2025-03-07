@@ -1,0 +1,62 @@
+*{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.total{
+  margin:40px;
+  padding:20px;
+  border:2px solid gray;
+
+}
+
+.title{
+  color:brown;
+}
+
+.inputbox{
+    margin-bottom:40px;
+    margin-left:10px;
+}
+.inputbox label{
+  display:block;
+  margin-bottom:10px;
+}
+.inputbox img{
+  width:200px;
+}
+.inputbox input,.inputbox select{
+  width:200px;
+  padding:10px 15px;
+  border:1px solid #ccc;
+}
+.inputbox input:focus{
+  border:1px solid #000;
+}
+.row{
+  display:flex;
+}
+.row .inputbox select,.row .inputbox input{
+  width:150px;
+}
+.submit_button{
+  width:100%;
+  padding:12px;
+  font-size:17px;
+  background:rgb(1, 143, 34);
+  color:rgb(255, 255, 255);
+  margin-top:5px;
+  cursor:pointer;
+  border:none;
+  border-radius:4px;
+  transition: color,background-color 0.25s;
+}
+.submit_button:hover{
+  background-color: rgb(227, 225, 225);
+  color:rgb(1, 143, 34);
+}
